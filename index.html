@@ -22,6 +22,9 @@
       .voicePackage {
         margin-left: 5px;
       }
+      .txtContent {
+        width: 100%;
+      }
     </style>
     <script src="./static/baidu_tts_core.js"></script>
     <script src="./static/index.js"></script>
@@ -41,23 +44,34 @@
       </div>
     </div>
     <div class="container">
-      <div class="input-group input-group-lg">
-        <textarea id="txtContent" rows="10" cols="160" placeholder="请输入要转换的内容"></textarea>
-      </div>
+      <textarea
+        id="txtContent"
+        rows="10"
+        class="txtContent"
+        placeholder="请输入要转换的内容"
+      ></textarea>
     </div>
     <div class="container">
       <div class="well">
-        <button type="button" id="btnStart" class="btn btn-default">开始朗读</button>
-        <input type="checkbox" id="chkLoop" class="loop" /><label class="loop" for="chkLoop">
-          循环播放
-        </label>
-        <span class="voicePackage">请选择语音包:</span>
-        <select id="slctVoicePackage">
-          <option value="1">度小宇</option>
-          <option value="2">度小美</option>
-          <option value="3">度逍遥</option>
-          <option value="4" selected>度丫丫</option>
-        </select>
+        <div class="row">
+          <div class="col-md-4">
+            <button type="button" id="btnStart" class="btn btn-default">开始朗读</button>
+          </div>
+          <div class="col-md-4">
+            <input type="checkbox" id="chkLoop" class="loop" /><label class="loop" for="chkLoop">
+              循环播放
+            </label>
+          </div>
+          <div class="col-md-4">
+            <span class="voicePackage">请选择语音包:</span>
+            <select id="slctVoicePackage">
+              <option value="1">度小宇</option>
+              <option value="2">度小美</option>
+              <option value="3">度逍遥</option>
+              <option value="4" selected>度丫丫</option>
+            </select>
+          </div>
+        </div>
       </div>
     </div>
     <div class="container" id="playerContainer"></div>
